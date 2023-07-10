@@ -1,5 +1,11 @@
-import React from "react";
-
 export default function Footer() {
-  return <div>Footer</div>;
+  return (
+    <footer id="footer" className="bg-neutral-800">
+      <div className="container">
+        <p className="text-center py-8 text-lg">
+          Copyright &copy; Mohamed Mostafa 2023
+        </p>
+      </div>
+    </footer>
+  );
 }

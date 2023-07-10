@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  a {
+    @apply text-lg text-neutral-200;
+  }
+  html,
+  body {
+    @apply h-full;
+  }
+  body {
+    @apply text-base font-normal leading-4 text-neutral-200;
+  }
+}
+@layer components {
+  .button {
+    @apply text-neutral-100 font-bold bg-primary-400 px-8 py-2 border-2 border-neutral-100 border-opacity-0 rounded-md leading-5;
+  }
+  .button[data-type="cta"] {
+    @apply border-opacity-100 leading-3;
+  }
+  .quote {
+    @apply text-4xl font-light italic text-neutral-800;
+  }
+  @media (max-width: 48em) {
+    .quote {
+      @apply text-2xl;
+    }
+  }
+}
+@layer utilities {
+  .container {
+    --max-width: 60rem;
+    --padding: 1rem;
+
+    @apply w-[min(var(--max-width),100%-(var(--padding)*2))] mx-auto;
+  }
+}
